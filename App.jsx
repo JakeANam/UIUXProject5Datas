@@ -1,5 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.scss'
+import './scss/App.scss'
 import Payment from './components/Payment';
 
 function App() {
