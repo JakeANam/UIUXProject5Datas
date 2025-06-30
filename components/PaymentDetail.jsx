@@ -25,13 +25,24 @@ const PaymentDetail = () => {
                         <h3>이용내역</h3>
                     </div>
 
-                    <div className="usageMenu2" onClick={() => setPaymentKey('payment')}>
+                        
+                    <div 
+                        className={paymentKey == "payment"?
+                            "usageMenu2":"usageMenu3"
+                        }
+                        onClick={() => setPaymentKey('payment')}
+                    >
                         <Link to={Link} as={'/PaymentDetail'} style={{ textDecoration: 'none' }}>
                             <p>주차 요금 조회 / 정산</p>
                         </Link>
                     </div>
 
-                    <div className="usageMenu3" onClick={() => setPaymentKey('estimate')}>
+                    <div
+                        className={paymentKey == "estimate"?
+                            "usageMenu2":"usageMenu3"
+                        }
+                        onClick={() => setPaymentKey('estimate')}
+                    >
                         <Link to={Link} as={'/PaymentDetail'} style={{ textDecoration: 'none' }}>
                             <p>주차 예상 요금 조회</p>
                         </Link>
